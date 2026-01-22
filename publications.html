@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Publications — Koen W. De Bock" />
+  <title>Koen W. De Bock | Publications</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <strong>Koen W. De Bock</strong>
+          <span>Marketing Analytics · Digital Marketing</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="publications.html">Publications</a>
+        <a class="navlink" href="teaching.html">Teaching</a>
+        <a class="navlink" href="service.html">Service</a>
+        <a class="navlink" href="contact.html">Contact</a>
+        <button class="btn" id="themeBtn" type="button">Toggle theme</button>
+      </nav>
+    </header>
+
+    <section class="card pagehead">
+      <h1>Publications</h1>
+      <p class="subtitle">Filterable list (curated selection based on the Audencia CV page)</p>
+
+      <div class="pub-controls" aria-label="Publication filters">
+        <label class="sr" for="q">Search publications</label>
+        <input class="input" id="q" type="search" placeholder="Search title, journal, authors…" />
+
+        <label class="sr" for="type">Type</label>
+        <select id="type">
+          <option value="all">All types</option>
+          <option value="article">Research articles</option>
+          <option value="book">Books</option>
+          <option value="chapter">Book chapters</option>
+          <option value="communication">Communications</option>
+        </select>
+
+        <label class="sr" for="year">Year</label>
+        <select id="year">
+          <option value="all">All years</option>
+        </select>
+
+        <button class="btn" id="reset" type="button">Reset</button>
+        <button class="btn primary" id="copyCite" type="button">Copy short citation</button>
+      </div>
+
+      <div id="pubCount" class="note"></div>
+      <div class="pubs" id="pubs" aria-live="polite"></div>
+
+      <p class="note">
+        Want the *full* list? Extend the `PUBS` array in <code>assets/script.js</code>.
+      </p>
+    </section>
+
+    <footer>
+      <div>© <span id="yearNow"></span> Koen W. De Bock</div>
+      <div>Data source: Audencia faculty CV page.</div>
+    </footer>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
